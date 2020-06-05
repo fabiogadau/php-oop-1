@@ -29,6 +29,17 @@
 
          return $canISeeIt;
       }
+
+      public function printDetails(){
+         echo "<h2>$this->title</h2>
+               <p><strong>Title: </strong>$this->original_title</p>
+               <p><strong>Original title: </strong>$this->genre</p>
+               <p><strong>Starring: </strong>$this->starring</p>
+               <p><strong>Original language: </strong>$this->original_language</p>
+               <p><strong>Country: </strong>$this->country</p>
+               <p><strong>Release year: </strong>$this->release_year</p>
+               <p><strong>Running time: </strong>$this->running_time</p>";
+      }
    }
 
    // Instances creation
@@ -63,6 +74,13 @@
    $movie3->running_time = 131;
 
    // Print Objects
+   $movie1->printDetails();
+   echo "<strong>Do I have time to see it? </strong> {$movie1->doIHaveTimeToSeeIt(130)}<br><br>";
+   $movie2->printDetails();
+   echo "<strong>Do I have time to see it? </strong> {$movie2->doIHaveTimeToSeeIt(60)}<br><br>";
+   $movie3->printDetails();
+   
+   /*echo "<strong>Do I have time to see it? </strong> {$movie3->doIHaveTimeToSeeIt(120)}";
    echo "<strong>Title: </strong> $movie1->title <br>";
    echo "<strong>Original title: </strong> $fmovie->original_title <br>";
    echo "<strong>Genre: </strong> $movie1->genre <br>";
@@ -91,4 +109,4 @@
    echo "<strong>Country: </strong> $movie3->country <br>";
    echo "<strong>Release Year: </strong> $movie3->release_year <br>";
    echo "<strong>Running time: </strong> $movie3->running_time minutes<br>";
-   echo "<strong>Do I have time to see it? </strong> {$movie3->doIHaveTimeToSeeIt(120)}";
+   echo "<strong>Do I have time to see it? </strong> {$movie3->doIHaveTimeToSeeIt(120)}";*/
